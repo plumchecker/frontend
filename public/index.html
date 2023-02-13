@@ -78,12 +78,11 @@
 		</div>
 	<div id="searchContainer" class="secondaryHeader">
 		<div class="container">
-		<form actio8n="/" method="post" novalidate="novalidate">
+		<form actio8n="/" novalidate="novalidate">
 			<div class="input-group">
 			<input autocapitalize="off" autocorrect="off" class="form-control" data-val="true" data-val-maxlength="The field Account must be a string or array type with a maximum length of &#39;255&#39;." data-val-maxlength-max="255" data-val-minlength="The field Account must be a string or array type with a minimum length of &#39;3&#39;." data-val-minlength-min="3" id="Account" maxlength="255" name="Account" placeholder="email" spellcheck="false" type="email" value="" />
-			<input type="hidden" name="apiEndpoint" id="apiEndpoint" value="https://haveibeenpwned.com/unifiedsearch/" />
 			<span class="input-group-btn">
-				<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage">check</button>
+				<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage" onclick="GetData()">check</button>
 			</span>
 			</div>
 		<div class="progress progress-striped active" id="loading">
@@ -93,6 +92,7 @@
 		</form>
 		</div>
 	</div>
+	<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage" onclick="GetData()">check</button>
 </div>
 	<script src="js/client.js"></script>
 </body>
