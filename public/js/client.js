@@ -1,7 +1,22 @@
 console.log('Client-side code running');
 
 function GetData() {
-  const uri = 'http://25.68.246.17:30001/api/search';
+  const uri = 'http://25.57.48.41:30001/api/search';
+  const form = document.getElementById('form');
+  
+  var e = document.getElementById("select"); //email passwor or domain
+  var input_type = e.options[e.selectedIndex].text;
+
+  const input_line = form.querySelector('[name="Account"]');
+
+  data={
+    type: input_type,
+    line: input_line.value
+  };
+
+  console.log(data);
+
+
   const initDetails = {
     mode: "cors",
     method: "post",
@@ -10,7 +25,7 @@ function GetData() {
       'Content-Type': 'application/json',
     },
     //make sure to serialize your JSON body
-    body: JSON.stringify({"key":"email","value":"clairelaigo@yahoo.com"})
+    body: JSON.stringify({"key": "email","value":"clairelaigo@yahoo.com"})
     }
 
   fetch(uri, initDetails).then( response => {
@@ -24,11 +39,11 @@ function GetData() {
     console.log( response.headers.get( "Content-Type" ) );
     return response.json();
   }).then( myJson =>
-                {
-                    console.log( JSON.stringify( myJson ) );
-                } )
-                .catch( err =>
-                {
-                    console.log( 'Fetch Error :-S', err );
-                } );
+        {
+            console.log( JSON.stringify( myJson ) );
+        } )
+        .catch( err =>
+        {
+            console.log( 'Fetch Error :-S', err );
+        } );
 }

@@ -423,3 +423,8 @@ button, input, optgroup, select, textarea {
 .input-group-addon, .input-group-btn {
   white-space: nowrap;
 }
+select[name="Choice"] {
+	margin-bottom:10px;
+	color:black;
+	font-family:inherit;
+}

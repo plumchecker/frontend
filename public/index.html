@@ -44,6 +44,8 @@
         window.appInsights=appInsights;
         appInsights.trackPageView();
     </script>
+	<link rel="stylesheet" href="../../_static/js/dojo/../dijit/themes/claro/claro.css">
+	
 </head>
 <body>
 <div class="bodyGradient">
@@ -78,21 +80,35 @@
 		</div>
 	<div id="searchContainer" class="secondaryHeader">
 		<div class="container">
-		<form actio8n="/" novalidate="novalidate">
+		<form action="/" novalidate="novalidate" id="form">
+		
+			<select name="Choice" required="required" id="select">
+				<option value="" selected>Выберите значение</option>
+				<option value="MS">Email</option>
+				<option value="PS">Password</option>
+				<option value="DS">Domain</option>
+			</select>
 			<div class="input-group">
-			<input autocapitalize="off" autocorrect="off" class="form-control" data-val="true" data-val-maxlength="The field Account must be a string or array type with a maximum length of &#39;255&#39;." data-val-maxlength-max="255" data-val-minlength="The field Account must be a string or array type with a minimum length of &#39;3&#39;." data-val-minlength-min="3" id="Account" maxlength="255" name="Account" placeholder="email" spellcheck="false" type="email" value="" />
-			<span class="input-group-btn">
-				<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage" onclick="GetData()">check</button>
-			</span>
+				<input autocapitalize="off" autocorrect="off" class="form-control" data-val="true"
+					data-val-maxlength="The field Account must be a string or array type with a maximum length of &#39;255&#39;."
+					data-val-maxlength-max="255"
+					data-val-minlength="The field Account must be a string or array type with a minimum length of &#39;3&#39;."
+					data-val-minlength-min="3" id="Account" maxlength="255" name="Account" placeholder="Введите данные"
+					spellcheck="false" type="email" value="" />
+				<span class="input-group-btn">
+					<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage" onclick="GetData()">check</button>
+				</span>
 			</div>
-		<div class="progress progress-striped active" id="loading">
-		<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-		</div>
-		</div>
+			<div class="progress progress-striped active" id="loading">
+				<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+					style="width: 100%">
+				</div>
+			</div>
 		</form>
 		</div>
 	</div>
-	<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage" onclick="GetData()">check</button>
+	
+	<!--<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage" onclick="GetData()">check</button>-->
 </div>
 	<script src="js/client.js"></script>
 </body>
