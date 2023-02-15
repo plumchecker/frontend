@@ -16,7 +16,6 @@ function GetData() {
 
   console.log(data);
 
-
   const initDetails = {
     mode: "cors",
     method: "post",
@@ -25,8 +24,9 @@ function GetData() {
       'Content-Type': 'application/json',
     },
     //make sure to serialize your JSON body
-    body: JSON.stringify({"key": "email","value":"clairelaigo@yahoo.com"})
+    body: JSON.stringify({ "key": data.type, "value": data.line })
     }
+  //console.log(initDetails);
 
   fetch(uri, initDetails).then( response => {
     if ( response.status !== 200 )
