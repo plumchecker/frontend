@@ -35,7 +35,7 @@ function GetData() {
             response.status );
         return;
     }
-
+    //clear_table("tableID");
 
     //document.getElementById('response').write(response);
 
@@ -46,12 +46,10 @@ function GetData() {
         {
             // console.log(JSON.stringify(myJson));
             add_data_to_list(myJson["leaks"]);//тут if
-            /*if (myJson["start_curcor"]=="") {
-              alert('Alertik') } */
             console.log( myJson["leaks"]);
             console.log( myJson["start_cursor"]);
             console.log( myJson["end_cursor"]);
-            if (myJson["start_cursor"]=="") console.log('Oshibkaa');
+            //if (myJson["start_cursor"]=="") console.log('Oshibkaa');
         } )
         .catch( err =>
         {
@@ -64,21 +62,36 @@ function GetData() {
   var sms = document.getElementById(Alertik);
 }*/
 
-function leave_one_row(tableID)
+function clear_table(tableID)
 {
-  var tableHeaderRowCount = 1;
+
   var table = document.getElementById(tableID);
   var rowCount = table.rows.length;
-  for (var i = tableHeaderRowCount; i < rowCount; i++) {
-      table.deleteRow(tableHeaderRowCount);
+  for (var i = 1; i < rowCount; i++) {
+      table.deleteRow(1);
   }
 }
 
 function add_data_to_list(data)
 {
-  leave_one_row("tableID")
-  let table = document.getElementById("tableID");
-  for(i=0;i<data.length;i++) {
+  clear_table("tableID")
+  let table = document.getElementById("tableID"); 
+  console.log(data)
+if (data.length>0)
+{  
+  var row = table.insertRow(-1);
+
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell3.innerHTML = 'password';
+  cell1.innerHTML = 'email';
+  cell2.innerHTML = 'domain';
+
+
+
+  for(let i=0;i<data.length;i++) {
     var row = table.insertRow(-1);
 
     var cell1 = row.insertCell(0);
@@ -86,10 +99,9 @@ function add_data_to_list(data)
     var cell3 = row.insertCell(2);
 
     console.log(data[i]['password'])
-    cell1.innerHTML = data[i]['password'];
-    cell2.innerHTML = data[i]['email'];
-    cell3.innerHTML = data[i]['domain'];
-
+    cell3.innerHTML = data[i]['password'];
+    cell1.innerHTML = data[i]['email'];
+    cell2.innerHTML = data[i]['domain'];
 
     // let newCell = newRow.insertCell(0);
     // let newText1 = document.createTextNode(data[i]['password']);
@@ -102,9 +114,18 @@ function add_data_to_list(data)
     // let newCell2 = newRow.insertCell(2);
     // let newText3 = document.createTextNode(data[i]['domain']);
     // newCell2.appendChild(newText3);
-
-
-
-
   }
+}
+else 
+{
+  var row = table.insertRow(-1);
+
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell1.innerHTML = 'no';
+  cell2.innerHTML = 'data';
+  cell3.innerHTML = 'found';
+}
 }

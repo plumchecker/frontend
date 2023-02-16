@@ -82,7 +82,7 @@ header a, header a:link, header a:visited {
 .nav > li > a {
   padding-left: 13px;
 padding-right: 13px;
-color: #fffff;
+color: #fff;
 text-decoration: none;
 }
 a {
@@ -167,9 +167,6 @@ a:active {
   margin: 0;
   top: 0px;
 }
-
-
-
 .main {
 	/* background-color: #804C0B;
 	background: linear-gradient(135deg,#2f3602 0,#85acdf 100%); */
@@ -177,11 +174,8 @@ a:active {
 	padding: 50px 10px 40px;
 		padding-bottom: 0px;
 		padding-top: 50px;
-		padding-left: 180px;
-		padding-right: 180px;
 		box-sizing: border-box;
 }
-
 .container {
 	width: 100%;
 }
@@ -214,21 +208,20 @@ font-family: inherit;
 	font-family:inherit;
 	font-size: 2.2em;
 	line-height:inherit;
-	color: white;
-	
-}
+	color: white; }
 
 .main .main-logo .logo {
 	
   border-radius: 20px;
   border: 5px solid;
-border-image-outset: 0;
-border-image-repeat: stretch;
-border-image-slice: 100%;
-border-image-source: none;
-border-image-width: 1;
+  border-image-outset: 0;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
   padding: 20px 10px;
   background-color: 9BBA20;
+  display: block;
+  max-width: 100%;
   color: inherit;
   text-align: inherit;
   font-family: inherit;
@@ -236,6 +229,8 @@ border-image-width: 1;
   text-align:inherit;
   color: inherit;
   line-height: inherit;
+  width: 100%;
+  height: auto;
 }
 
 #searchContainer.secondaryHeader {
@@ -446,7 +441,7 @@ th, td {
 th {
   letter-spacing: 3px;
   padding-block-end: 5px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   padding-bottom: 13px;
 }
 
