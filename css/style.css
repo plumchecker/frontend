@@ -14,8 +14,6 @@ body {
 	margin:0;
 	width:100%;
 }
-body {
-overflow-y: scroll;}
 p,label,li{
 	font-size:1.2em;
 	font-weight:400;
