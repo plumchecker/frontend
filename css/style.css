@@ -532,5 +532,5 @@ tbody tr:nth-child(even) {
 
 .input-group {
 	display: grid;
-	grid-template-columns: max-content auto 3em;
+	grid-template-columns: max-content auto max-content;
 }
