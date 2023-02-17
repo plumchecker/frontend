@@ -46,6 +46,9 @@ a {
 	min-height: 50px;
 	color:inherit;
 	width:100%;
+	width:auto;
+	border-top:0;
+	box-shadow: none;
 }
 
 .navbar-inverse{
@@ -56,11 +59,6 @@ a {
 .navbar-inverse .container {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.navbar-header {
-	padding-left: 15px;
-	color: inherit;
 }
 
 .navbar-nav > li > a {
@@ -113,7 +111,7 @@ a:active {
   color: #CDFEAA;
 }
 
-.navbar-collapse .collapse {
+.collapse {
 	display: inline-block;
 	height: auto;
 	padding-bottom:0;
@@ -124,13 +122,10 @@ a:active {
 	color:inherit;
 }
 
-.navbar-right {
-	float:absolute;
-	margin-right:-15px;
-}
-
 .navbar-nav{
 	margin:0;
+	float:absolute;
+	margin-right:-15px;
 }
 
 .nav > li{
@@ -138,15 +133,9 @@ a:active {
 	display:inline-block;
 }
 
-.nav{
+.nav {
 	padding-left:0;
 	list-style: none;
-}
-
-.navbar{
-	width:auto;
-	border-top:0;
-	box-shadow: none;
 }
 
 .header-content {
@@ -184,14 +173,7 @@ a:active {
 .logoPanel {
 	text-align: center;
 	margin-top: 15px;
-}
-
-.row {
-margin: 15px 0;
-color: inherit;
-}
-
-.row .logoPanel {
+	margin: 15px 0 0 0;
 	color: inherit;
 }
 

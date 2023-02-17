@@ -14,10 +14,10 @@
 
 <body>
 	<div class="bodyGradient">
-		<header class="navbar navbar-inverse navbar-static-top">
+		<header class="navbar navbar-inverse">
 			<div class="container">
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
+				<div class="collapse">
+					<ul class="nav navbar-nav">
 						<li class="active">
 							<a href="">Update the page</a>
 						</li>
@@ -27,7 +27,7 @@
 		</header>
 		<div class="main">
 			<div class="container">
-				<div class="row logoPanel">
+				<div class="logoPanel">
 					<div class="main-logo">
 						<div class="logo"> Is a plum here in this room?
 						</div>
@@ -47,11 +47,11 @@
 				</select>
 					<form novalidate="novalidate" id="form">
 						<input autocapitalize="off" autocorrect="off" class="form-control" data-val="true"
-							data-val-maxlength="The field Account must be a string or array type with a maximum length of &#39;255&#39;."
+							data-val-maxlength="The search query length should not exceed &#39;255&#39; characters."
 							data-val-maxlength-max="255"
-							data-val-minlength="The field Account must be a string or array type with a minimum length of &#39;3&#39;."
+							data-val-minlength="The search query should have at least &#39;3&#39; characters."
 							data-val-minlength-min="3" id="Account" maxlength="255" name="Account"
-							placeholder="Введите данные" spellcheck="false" type="email" value="" />
+							placeholder="Search..." spellcheck="false" type="email" value="" />
 					</form>
 					<span class="input-group-btn">
 						<button class="btn btn-primary btn-lg" type="submit" id="searchPwnage"
