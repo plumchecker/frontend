@@ -44,7 +44,7 @@ div::before {
 	border-image-outset: 0;
 	margin-left: auto;
 	margin-right: auto;
-
+	min-height: 100vh;
 }
 a{
 color:white;}
@@ -82,7 +82,7 @@ header a, header a:link, header a:visited {
 .nav > li > a {
   padding-left: 13px;
 padding-right: 13px;
-color: #fffff;
+color: #fff;
 text-decoration: none;
 }
 a {
@@ -167,9 +167,6 @@ a:active {
   margin: 0;
   top: 0px;
 }
-
-
-
 .main {
 	/* background-color: #804C0B;
 	background: linear-gradient(135deg,#2f3602 0,#85acdf 100%); */
@@ -177,11 +174,8 @@ a:active {
 	padding: 50px 10px 40px;
 		padding-bottom: 0px;
 		padding-top: 50px;
-		padding-left: 180px;
-		padding-right: 180px;
 		box-sizing: border-box;
 }
-
 .container {
 	width: 100%;
 }
@@ -214,21 +208,20 @@ font-family: inherit;
 	font-family:inherit;
 	font-size: 2.2em;
 	line-height:inherit;
-	color: white;
-	
-}
+	color: white; }
 
 .main .main-logo .logo {
 	
   border-radius: 20px;
   border: 5px solid;
-border-image-outset: 0;
-border-image-repeat: stretch;
-border-image-slice: 100%;
-border-image-source: none;
-border-image-width: 1;
+  border-image-outset: 0;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
   padding: 20px 10px;
   background-color: 9BBA20;
+  display: block;
+  max-width: 100%;
   color: inherit;
   text-align: inherit;
   font-family: inherit;
@@ -236,6 +229,8 @@ border-image-width: 1;
   text-align:inherit;
   color: inherit;
   line-height: inherit;
+  width: 100%;
+  height: auto;
 }
 
 #searchContainer.secondaryHeader {
@@ -427,4 +422,60 @@ select[name="Choice"] {
 	margin-bottom:10px;
 	color:black;
 	font-family:inherit;
+}
+.tableoutput{
+	min-height: 215px;
+	height: fit;
+	background-color: rgba(0,0,0,.1);
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(0,0,0,.2);
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+tr{
+  padding:10px;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  letter-spacing: 3px;
+  padding-block-end: 5px;
+  font-size: 1.5em;
+  padding-bottom: 13px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+tbody td {
+  text-align: center;
+}
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #2f1b34;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #36455d;
 }

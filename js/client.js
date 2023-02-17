@@ -1,7 +1,7 @@
 console.log('Client-side code running');
 
 function GetData() {
-  const uri = 'http://25.57.48.41:30001/api/search';
+  const uri = 'http://localhost:30001/api/search';
   const form = document.getElementById('form');
   
   var e = document.getElementById("select"); //email password or domain
