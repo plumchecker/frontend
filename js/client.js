@@ -63,6 +63,15 @@ function clear_table(tableID)
   }
 }
 
+function add_row_to_table(table, new_row)
+{
+	var row = table.insertRow(-1);
+	for (let i = 0; i < new_row.length; i++) {
+		let cell = row.insertCell(i);
+		cell.innerHTML = new_row[i];
+	}
+}
+
 function add_data_to_list(data)
 {
   clear_table("tableID")
@@ -70,42 +79,15 @@ function add_data_to_list(data)
   console.log(data)
 if (data.length>0)
 {  
-  var row = table.insertRow(-1);
-
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3 = row.insertCell(2);
-
-  cell3.innerHTML = 'password';
-  cell1.innerHTML = 'email';
-  cell2.innerHTML = 'domain';
-
-
+	add_row_to_table(table, ['email', 'domain', 'password']);
 
   for(let i=0;i<data.length;i++) {
-    var row = table.insertRow(-1);
-
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-
+	  add_row_to_table(table, [data[i]['email'], data[i]['domain'], data[i]['password']])
     console.log(data[i]['password'])
-    cell3.innerHTML = data[i]['password'];
-    cell1.innerHTML = data[i]['email'];
-    cell2.innerHTML = data[i]['domain'];
-
   }
 }
 else 
 {
-  var row = table.insertRow(-1);
-
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3 = row.insertCell(2);
-
-  cell1.innerHTML = 'no';
-  cell2.innerHTML = 'data';
-  cell3.innerHTML = 'found';
+	add_row_to_table(table, ['no', 'data', 'found']);
 }
 }
