@@ -23,10 +23,9 @@ function GetData() {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    //make sure to serialize your JSON body
+  
     body: JSON.stringify({ "key": data.type, "value": data.line })
     }
-  //console.log(initDetails);
 
   fetch(uri, initDetails).then( response => {
     if ( response.status !== 200 )
@@ -35,21 +34,16 @@ function GetData() {
             response.status );
         return;
     }
-    //clear_table("tableID");
-
-    //document.getElementById('response').write(response);
 
     console.log( response["leaks"]);
     console.log( response.headers.get( "Content-Type" ) );
     return response.json();
   }).then( myJson =>
         {
-            // console.log(JSON.stringify(myJson));
-            add_data_to_list(myJson["leaks"]);//тут if
+            add_data_to_list(myJson["leaks"]);
             console.log( myJson["leaks"]);
             console.log( myJson["start_cursor"]);
             console.log( myJson["end_cursor"]);
-            //if (myJson["start_cursor"]=="") console.log('Oshibkaa');
         } )
         .catch( err =>
         {
@@ -58,9 +52,6 @@ function GetData() {
 
 
 }
-/*function ahtung(Alertik){
-  var sms = document.getElementById(Alertik);
-}*/
 
 function clear_table(tableID)
 {
@@ -103,17 +94,6 @@ if (data.length>0)
     cell1.innerHTML = data[i]['email'];
     cell2.innerHTML = data[i]['domain'];
 
-    // let newCell = newRow.insertCell(0);
-    // let newText1 = document.createTextNode(data[i]['password']);
-    // newCell.appendChild(newText1);
-
-    // let newCell1 = newRow.insertCell(1);
-    // let newText2 = document.createTextNode(data[i]['email']);
-    // newCell1.appendChild(newText2);
-
-    // let newCell2 = newRow.insertCell(2);
-    // let newText3 = document.createTextNode(data[i]['domain']);
-    // newCell2.appendChild(newText3);
   }
 }
 else 

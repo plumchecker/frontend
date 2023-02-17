@@ -423,12 +423,17 @@ select[name="Choice"] {
 	color:black;
 	font-family:inherit;
 }
-
+.tableoutput{
+	min-height: 215px;
+	height: fit;
+	background-color: rgba(0,0,0,.1);
+}
 table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  margin-top: 18px;
+  background-color: rgba(0,0,0,.2);
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
